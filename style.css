@@ -478,3 +478,11 @@ section:last-child {
   -moz-animation-delay: 0, 2.5s;
   animation-delay: 0, 2.5s;
 }
+
+.bold-text {
+  font-weight:bold;
+}
+
+.underline-text {
+  text-decoration:underline;
+}
