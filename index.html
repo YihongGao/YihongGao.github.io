@@ -1,247 +1,163 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>Leo Kao-Curriculum Vitae-TPE</title>
-
-    <meta name="viewport" content="width=device-width" />
-    <meta name="description" content="The Curriculum Vitae of Yi-Ting Kuo." />
     <meta charset="UTF-8" />
-
-    <link
-      href="http://fonts.googleapis.com/css?family=Lato:400,300"
-      rel="stylesheet"
-      type="text/css"
-    />
-    <link type="text/css" rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Leo Kao — Senior Software Engineer (Backend · Cloud Platform · AI)</title>
+    <meta name="description" content="Curriculum Vitae of Leo Kao (Yi-Hung Kao), senior software engineer in Taipei: backend, cloud platform and AI applications." />
+    <link rel="alternate" hreflang="zh-Hant" href="zh.html" />
+    <link rel="stylesheet" href="cv.css" />
   </head>
-  <body id="top">
-    <div id="cv" class="instaFade">
-      <div class="mainDetails">
-        <div id="headshot" class="quickFade">
-          <img src="images/headshot.jpg" alt="Tina" />
+  <body>
+    <main class="cv">
+      <header class="cv-header">
+        <img src="images/headshot.jpg" alt="Leo Kao" />
+        <div>
+          <h1>Leo Kao</h1>
+          <p class="headline">Senior Software Engineer · Backend · Cloud Platform · AI Applications</p>
+          <ul class="contact">
+            <li>Taipei, Taiwan</li>
+            <li><a href="mailto:yihonggaotw@gmail.com">yihonggaotw@gmail.com</a></li>
+            <li><a href="https://www.linkedin.com/in/yihong-gao-tw">LinkedIn</a></li>
+            <li><a href="https://github.com/YihongGao">GitHub</a></li>
+          </ul>
         </div>
-        <div id="name">
-          <h1 class="quickFade delayTwo">Leo Kao</h1>
+        <a class="lang-switch" href="zh.html" hreflang="zh-Hant">中文版</a>
+      </header>
 
-          <div id="contactDetails" class="quickFade delayFour">
+      <section>
+        <h2>Summary</h2>
+        <div>
+          <p>
+            Senior software engineer with 11+ years across banking, payments and mobility. Senior Software Engineer
+            and Team Lead (4 engineers) at Autopass, and primary owner of production on-call and incident response.
+          </p>
+          <ul>
+            <li><strong>Systems &amp; architecture</strong>: design and deliver highly available, maintainable microservice systems (idempotent retries, GitOps rollback, multi-service GKE operations) across architecture, backend, GCP/Kubernetes infrastructure and CI/CD.</li>
+            <li><strong>AI applications</strong>: bring AI into internal operations (OCR, an operations MCP server) to cut manual work, built an AI voice assistant, and led the team's adoption of agentic coding.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section>
+        <h2>Skills</h2>
+        <dl class="skills">
+          <dt>Backend</dt><dd>Kotlin, Java, Quarkus, Spring Boot, PostgreSQL, Redis</dd>
+          <dt>Cloud / DevOps</dt><dd>GCP, Kubernetes, Terraform, Argo CD, GitHub Actions, OpenTelemetry</dd>
+          <dt>AI</dt><dd>LiveKit Agents, LangChain4j, MCP, Claude Code</dd>
+        </dl>
+      </section>
+
+      <section>
+        <h2>Experience</h2>
+        <div>
+          <article class="job">
+            <div class="job-head">
+              <h3>Autopass Inc.</h3>
+              <span class="when">Oct 2023 – Present</span>
+            </div>
+            <p class="role">Senior Software Engineer (Team Lead) · Taipei</p>
+
+            <h4>Leadership &amp; Technology Adoption</h4>
             <ul>
-              <br />
-              <li>Backend Developer / DevOps Engineers</li>
-              <li>8+ years software experience</li>
-              <li>Micro-service Design & Implementation </li>
-              <li>Openshift, Kubernetes platform Maintain & Troubleshooting</li>
-			        <li>CI/CD pipeline Design & Implementation</li>
-              <li>Modern web 2021 conference speaker</li>
-              <br />
-              <li>
-                Taipei, Taiwan |
-                <a href="https://www.linkedin.com/in/yihong-gao-tw">Linkedin</a>
-              </li>
-              <li>
-                <a href="mailto:yihonggaotw@gmail.com.tw" target="_blank"
-                  >yihonggaotw@gmail.com</a
-                >
-              </li>
+              <li><strong>Team leadership</strong>: lead a 4-person team and run sprint planning across four product lines (payments, loyalty, subscriptions, AI); lead architecture design of the parking payment platform and the AI voice assistant.</li>
+              <li><strong>Microservices &amp; GitOps adoption</strong>: in an organization new to distributed systems, designed and built the payment platform's infrastructure and CI/CD, and led the team in adopting microservices and GitOps.</li>
+              <li><strong>Agentic coding adoption</strong>: introduced Claude Code, MCP and Skills to the team; it is now the in-house engineering team's primary way of building software. Presented it company-wide to managers, PMs, marketing and engineers.</li>
+              <li><strong>Incident-investigation automation</strong>: use AI to correlate logs, traces, metrics and source code into root-cause analyses, speeding up production troubleshooting.</li>
             </ul>
-          </div>
+
+            <h4>AI Products</h4>
+            <p class="stack">TypeScript · LiveKit Agents · OpenAI Realtime · Anthropic API · MCP · Kotlin · Quarkus</p>
+            <ul>
+              <li><strong>AI travel assistant</strong>: own end to end a voice assistant that lets drivers navigate, check lot and curbside availability, and get payment links. Zero to launch in under a month, now open to all users.</li>
+              <li><strong>Reliability by design</strong>: the AI only interprets speech; system rules gate every trip and destination change, limiting hallucination impact. An eval gate sets the production quality bar for every change (harness design).</li>
+              <li><strong>OCR</strong>: AI recognition replaced manual data entry, sharply cutting document review time; PII never reaches logs or storage.</li>
+              <li><strong>Operations MCP server</strong>: marketing and customer-service staff query member and subscription data in natural language without asking engineers, making the organization more AI-native.</li>
+            </ul>
+
+            <h4>Payments &amp; Loyalty Backend</h4>
+            <p class="stack">Kotlin · Quarkus · GraalVM Native Image · PostgreSQL · Redis · GCP Pub/Sub</p>
+            <ul>
+              <li><strong>Large-scale system migration</strong>: led the carve-out of the parking transaction core from a legacy monolith into a highly available, scalable microservice payment platform; shifted traffic gradually with feature flags and canary releases, with zero major incidents.</li>
+              <li><strong>Parking payment platform</strong>: own all 11 microservices, from architecture and development to on-call.</li>
+              <li><strong>Idempotent transactions</strong>: built idempotent order processing that safeguards transaction correctness, preventing double charges and duplicate e-invoices.</li>
+              <li><strong>E-invoicing &amp; reconciliation</strong>: fully automated e-invoice uploads, reconciliation and payouts with monitoring and alerts, with far less engineering and finance effort.</li>
+              <li><strong>Loyalty points</strong>: single-handedly built the loyalty platform from scratch, integrating a national convenience-store chain and a major telecom operator from account linking to monthly settlement.</li>
+              <li><strong>Subscription management</strong>: unified in-app (RevenueCat) and web (Recur) subscriptions with upgrades and next-cycle plan changes, preventing overlaps; batched monthly point rebates with duplicate protection.</li>
+              <li><strong>OAuth member integration</strong>: led the design of OAuth 2.0 sign-in with Autopass accounts for the Driver Center, unifying members across both systems.</li>
+            </ul>
+
+            <h4>Cloud Platform &amp; DevOps</h4>
+            <p class="stack">GCP · GKE · Terraform · Kustomize · Argo CD · GitHub Actions · OpenTelemetry</p>
+            <ul>
+              <li><strong>GitOps</strong>: manage 17 services and their GCP resources with Argo CD, Kustomize and Terraform; every change is reviewed in Git, traceable and reversible.</li>
+              <li><strong>CI/CD standard</strong>: built shared workflows (incl. DB schema review) that became the CI/CD standard for all services; replaced service-account keys with Workload Identity Federation.</li>
+              <li><strong>Observability</strong>: tie traces, logs and metrics together with OpenTelemetry; one trace ID runs from the load balancer through the application, and API latency percentiles feed Grafana for fast incident triage.</li>
+            </ul>
+          </article>
+
+          <article class="job">
+            <div class="job-head">
+              <h3>Atome</h3>
+              <span class="when">Sep 2022 – Apr 2023</span>
+            </div>
+            <p class="role">Senior Backend Engineer · Taipei · Southeast Asian buy-now-pay-later (BNPL) platform</p>
+            <p class="stack">Spring Boot · MySQL · Redis · RabbitMQ · Kubernetes</p>
+            <ul>
+              <li><strong>Payment transactions</strong>: owned the core payment order flow.</li>
+              <li><strong>Singles' Day (11.11)</strong>: drove performance tuning, load testing and rate limiting of the order flow for the 2022 sale, with zero major incidents.</li>
+            </ul>
+          </article>
+
+          <article class="job">
+            <div class="job-head">
+              <h3>Cathay United Bank</h3>
+              <span class="when">Apr 2020 – Aug 2022</span>
+            </div>
+            <p class="role">Backend / DevOps Engineer · Taipei</p>
+            <p class="stack">Spring Boot · Quarkus · Oracle · PostgreSQL · Redis · Kafka · OpenShift · Argo CD</p>
+            <ul>
+              <li><strong>Multi-cluster operations (team)</strong>: ran ~8 OpenShift clusters (SIT / UAT / PROD) with 1,000+ pods.</li>
+              <li><strong>CI/CD (team)</strong>: maintained Azure DevOps + Argo CD CI/CD with dependency and image scanning.</li>
+              <li><strong>Observability (team)</strong>: built and ran Grafana, Graylog and Jaeger for incident and performance analysis.</li>
+              <li><strong>Credit card system</strong>: built and ran credit card REST APIs and batch jobs; built micro-frontend SPAs (Angular, single-spa).</li>
+            </ul>
+          </article>
+
+          <article class="job">
+            <div class="job-head">
+              <h3>Trade-Van Information Services</h3>
+              <span class="when">May 2014 – Dec 2019</span>
+            </div>
+            <p class="role">Full Stack Engineer · Taipei</p>
+            <p class="stack">Java · Spring · Struts2 · Hibernate · Oracle · jQuery</p>
+            <ul>
+              <li><strong>E-invoice platform</strong>: more than 100 million rows of hot data; kiosk applications (front end and back end); i18n.</li>
+              <li><strong>Donation platform</strong>: responsive redesign for in-app WebView, Firebase push notifications, Google Maps API, Git and Jenkins CI/CD.</li>
+            </ul>
+          </article>
         </div>
+      </section>
 
-        <div class="clear"></div>
-      </div>
+      <section>
+        <h2>Community &amp; Certifications</h2>
+        <ul>
+          <li><strong>Winner, Kubernetes category, 2024 iThome Ironman Contest</strong>: <a href="https://ithelp.ithome.com.tw/users/20147637/ironman/7525">Kubernetes from a Software Developer's Perspective, Part 2</a></li>
+          <li>Honorable Mention, DevOps category, 2023 iThome Ironman Contest: <a href="https://ithelp.ithome.com.tw/users/20147637/ironman/6738">Kubernetes from a Software Developer's Perspective</a></li>
+          <li>Speaker, Modern Web 2021: Micro Frontend</li>
+          <li>Certified Kubernetes Administrator (CKA), 2021</li>
+          <li>Oracle Certified Expert, Java EE 6 Web Component Developer, 2016</li>
+          <li>Oracle Certified Professional, Java SE 6 Programmer, 2014</li>
+        </ul>
+      </section>
 
-      <div id="mainArea" class="quickFade delayFive">
-        <section>
-          <div class="sectionTitle">
-            <h1>Work Experience</h1>
-          </div>
-
-          <div class="sectionContent">
-            <article>
-              <h2>Sr. Backend Engineer | Atome</h2>
-              <p>
-                September 2022 - April 2023<br />
-                • <span class="bold-text underline-text"> Order, Payment Module (RESTful API & Batch)</span> system development and maintain<br />
-                　- <span class="bold-text underline-text">Kubernetes</span> <br />
-                　- <span class="bold-text underline-text">Spring boot</span> <br />
-                　- <span class="bold-text underline-text">MySQL</span> </span>、<span class="bold-text underline-text"> Redis </span><br />
-                　- <span class="bold-text underline-text">RabbitMQ</span><br />
-                • Software testing <br />
-                　- <span class="bold-text underline-text">JUnit</span>、<span class="bold-text underline-text">JMeter</span> 、<span class="bold-text underline-text">WireMock</span> <br />                
-                • Conduct code reviews<br />
-                • Improve the work flow<br />
-                　- Quickly find the logs of alarm events with a One-Click. <br />
-                • Integrate security tools into the CI/CD flow<br />
-                　- SAST、open source vulnerabilities & license<br />
-              </p>
-            </article>
-
-            <article>
-              <h2>Backend Engineer / DevOps Engineer | Cathay United Bank</h2>
-              <p>
-                April 2020 - August 2022<br />
-                • <span class="bold-text underline-text">Credit-card (RESTful API & Batch)</span> system development and maintain<br />
-                　- <span class="bold-text underline-text">Kubernetes</span> <br />
-                　- <span class="bold-text underline-text">Spring boot</span>、<span class="bold-text underline-text">Quarkus</span>  <br />
-                　- <span class="bold-text underline-text">Oracle</span>、<span class="bold-text underline-text">PostgreSQL</span> </span>、<span class="bold-text underline-text"> Redis </span><br />
-                　- <span class="bold-text underline-text">Kafka</span><br />
-                　- <span class="bold-text underline-text">Kettle、Python、Shell Script</span><br />
-                • Software testing <br />
-                　- <span class="bold-text underline-text">JUnit</span>、<span class="bold-text underline-text">JMeter</span> 、<span class="bold-text underline-text">WireMock</span> <br />                
-                • Conduct code reviews<br />                
-                • Developed micro-frontend / SPA Web application.<br />
-                　- Angular、Single-spa<br />
-                • Design and improve CI / CD solutions.<br />
-                　- TFS (Azure DevOps)、Argo CD、Argo rollouts<br />
-                • Integrate security tools into the CI/CD flow<br />
-                　- SAST、open source vulnerabilities & license、Image vulnerabilities<br />
-              </p>
-            </article>
-
-            <article>
-              <h2>Full Stack Engineer | Trade-Van Inc.</h2>
-              <p>
-                May 2014 - December 2019<br />
-                • Built and maintained Receipt System <br />
-                　- Use javascript、jQuery、Struts2、Spring、Hibernates、Oracle、iReport、Quartz<br />
-                　- Handled more than the 100 million hot data in database<br />
-                　- Developed Kiosk applications(including Front-end and back-end) <br />
-                　- Use Struts2 implement i18n <br />
-                • Built and maintained Donation System <br />
-                　- Use: javascript、jQuery、Struts2、Spring、Hibernates、Oracle、iReport、Quartz<br />
-                　- Upgraded from normal web design to responsive web design in combination with APP WebView.<br />
-                　- CI/CD with Git and jenkins <br/>				　
-                　- Use of Firebase implemented push notification with APP.<br />
-                　- Use of Google Maps API.<br />
-              </p>
-            </article>
-          </div>
-          <div class="clear"></div>
-        </section>
-
-        <section>
-          <div class="sectionTitle">
-            <h1>Skills</h1>
-          </div>
-
-          <div class="sectionContent">          
-            <h2>Backend</h2>
-            <hr>
-            <ul class="keySkills">              
-              <li>Java</li>
-              <li>Spring Boot</li>
-              <li>Quarkus</li>
-              <li>Kafka</li>              
-              <li>Hibernate</li>
-              <li>PostgreSQL</li>			  
-              <li>Oracle</li>
-              <li>Kettle</li>
-            </ul>
-            <h2>Frontend</h2>
-            <hr>
-            <ul class="keySkills">              
-              <li>Angular</li>
-              <li>Single-spa</li>
-              <li>Type Script</li>
-              <li>Rxjs</li>
-              <li>JQuery</li>
-            </ul>	
-            <h2>Application Platform / DevOps Tool</h2>
-            <hr>
-            <ul class="keySkills">
-              <li>Kubernetes</li>
-              <li>OpenShift</li>
-              <li>Graylog</li>
-              <li>Grafana</li>
-              <li>Jenkins</li>
-              <li>Argo CD</li>
-              <li>Argo rollout</li>
-              <li>Azure DevOps</li>
-            </ul>             		
-          </div>
-          <div class="clear"></div>          
-        </section>
-
-        <section>
-          <div class="sectionTitle">
-            <h1>Education & Credentials</h1>
-          </div>
-
-          <div class="sectionContent">
-            <article>
-              <div>
-                <h2>Certified Kubernetes Administrator (CKA)</h2>
-                <img
-                  src="images/CKA.png"
-                  alt="CKA"
-                  style="width: 80%; max-width: 400px"
-                />
-              </div>
-              <p></p>
-            </article>
-
-            <article>
-              <div>
-                <h2> Oracle Certified Expert, Java Platform, EE 6 Web Component Developer</h2>
-                <img
-                  src="images/OCPJWCD.png"
-                  alt="OCPJWCD"
-                  style="width: 80%; max-width: 400px"
-                />
-              </div>
-              <p></p>
-            </article>
-
-            <article>
-              <div>
-                <h2>Oracle Certified Professional, Java SE 6 Programmer<h2>
-                <img
-                  src="images/OCPJP.png"
-                  alt="OCPJP"
-                  style="width: 80%; max-width: 400px"
-                />
-              </div>
-              <p></p>
-            </article>
-          </div>
-          <div class="clear"></div>
-        </section>
-
-        <section>
-          <div class="sectionTitle">
-            <h1>Languages</h1>
-          </div>
-
-          <div class="sectionContent">
-            <article>
-              <div id="contactDetails1" class="quickFade delayFour">
-                <ul>
-                  <li>Mandarin - Native proficiency</li>
-                  <li>English - Limited working proficiency</li>                  
-                  <p></p>
-                </ul>
-              </div>
-            </article>
-          </div>
-          <div class="clear"></div>
-        </section>
-
-      </div>
-    </div>
-    <script type="text/javascript">
-      var gaJsHost =
-        "https:" == document.location.protocol ? "https://ssl." : "http://www.";
-      document.write(
-        unescape(
-          "%3Cscript src='" +
-            gaJsHost +
-            "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"
-        )
-      );
-    </script>
-    <script type="text/javascript">
-      var pageTracker = _gat._getTracker("UA-3753241-1");
-      pageTracker._initData();
-      pageTracker._trackPageview();
-    </script>
+      <section>
+        <h2>Education &amp; Languages</h2>
+        <ul>
+          <li>Bachelor's degree, Southern Taiwan University of Science and Technology, 2012</li>
+          <li>Mandarin (native), English (limited working proficiency)</li>
+        </ul>
+      </section>
+    </main>
   </body>
 </html>
