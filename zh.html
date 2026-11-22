@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Leo Kao — 資深軟體工程師（後端 · 雲端平台 · AI 應用）</title>
+    <meta name="description" content="Leo Kao（Yi-Hung Kao）的履歷：台北的資深軟體工程師，專長後端、雲端平台與 AI 應用。" />
+    <link rel="alternate" hreflang="en" href="index.html" />
+    <link rel="stylesheet" href="cv.css" />
+  </head>
+  <body>
+    <main class="cv">
+      <header class="cv-header">
+        <img src="images/headshot.jpg" alt="Leo Kao" />
+        <div>
+          <h1>Leo Kao</h1>
+          <p class="headline">資深軟體工程師 · 後端 · 雲端平台 · AI 應用</p>
+          <ul class="contact">
+            <li>台北</li>
+            <li><a href="mailto:yihonggaotw@gmail.com">yihonggaotw@gmail.com</a></li>
+            <li><a href="https://www.linkedin.com/in/yihong-gao-tw">LinkedIn</a></li>
+            <li><a href="https://github.com/YihongGao">GitHub</a></li>
+          </ul>
+        </div>
+        <a class="lang-switch" href="index.html" hreflang="en">English</a>
+      </header>
+
+      <section>
+        <h2>簡介</h2>
+        <div>
+          <p>
+            11+ 年軟體開發經驗，做過銀行、支付與移動服務領域。現任麻吉行得通（Autopass 車麻吉）資深軟體工程師暨
+            Team Lead（4 人團隊），同時是 production on-call 與事故處理的主要負責人。
+          </p>
+          <ul>
+            <li><strong>系統架構與工程</strong>：設計並交付高可用且可維護的微服務系統（冪等重試、GitOps 可回滾部署、多服務 GKE 營運），涵蓋架構設計、後端開發、GCP／Kubernetes 基礎設施與 CI/CD。</li>
+            <li><strong>AI 應用</strong>：把 AI 整合進內部作業（OCR 應用、營運用 MCP server）以減少人工作業，開發 AI 語音助理，並帶領團隊導入 agentic coding。</li>
+          </ul>
+        </div>
+      </section>
+
+      <section>
+        <h2>技能</h2>
+        <dl class="skills">
+          <dt>Backend</dt><dd>Kotlin、Java、Quarkus、Spring Boot、PostgreSQL、Redis</dd>
+          <dt>Cloud／DevOps</dt><dd>GCP、Kubernetes、Terraform、Argo CD、GitHub Actions、OpenTelemetry</dd>
+          <dt>AI</dt><dd>LiveKit Agents、LangChain4j、MCP、Claude Code</dd>
+        </dl>
+      </section>
+
+      <section>
+        <h2>工作經歷</h2>
+        <div>
+          <article class="job">
+            <div class="job-head">
+              <h3>麻吉行得通股份有限公司（Autopass 車麻吉）</h3>
+              <span class="when">2023-10 — 至今</span>
+            </div>
+            <p class="role">資深軟體工程師（Team Lead）· 台北</p>
+
+            <h4>團隊領導與技術導入</h4>
+            <ul>
+              <li><strong>團隊領導</strong>：帶領 4 人團隊、掌舵 sprint 規劃，同時推進支付、點數、訂閱與 AI 四條產品線；主導停車支付平台與 AI 語音助理的架構設計。</li>
+              <li><strong>導入微服務與 GitOps</strong>：在原本不熟悉分散式架構的組織中，規劃打造停車支付平台的 Infra 與 CI/CD，帶領團隊落地微服務與 GitOps。</li>
+              <li><strong>推動 agentic coding</strong>：主導團隊導入 Claude Code、MCP 與 Skills，已成為內部開發團隊的主要開發方式；並在全公司分享會向主管、PM、行銷與工程師介紹。</li>
+              <li><strong>事故調查自動化</strong>：以 AI 串起可觀測性資料（log、trace、metrics）與系統原始碼，快速產出事故根因分析報告，加速團隊排查線上問題。</li>
+            </ul>
+
+            <h4>AI 產品</h4>
+            <p class="stack">TypeScript · LiveKit Agents · OpenAI Realtime · Anthropic API · MCP · Kotlin · Quarkus</p>
+            <ul>
+              <li><strong>AI 出行助理</strong>：主要 owner，打造用戶的 AI 出行助理，開口就能導航、查停車場與路邊空位、找繳費連結；一個月內從 0 到上線並開放全用戶。</li>
+              <li><strong>可靠性設計</strong>：AI 只負責聽懂，行程與目的地變更一律由系統規則把關，降低 AI 幻覺對品質的影響；設計 eval gate 品質門檻，確保每次調整都符合生產環境要求（harness 設計）。</li>
+              <li><strong>OCR 辨識</strong>：AI 辨識取代人工輸入，大幅壓縮每份文件的審核時間；PII 不進 log、不落地。</li>
+              <li><strong>營運用 MCP server</strong>：行銷、客服以自然語言自助查詢會員與訂閱數據，不再依賴工程師撈資料，推動組織更 AI native。</li>
+            </ul>
+
+            <h4>支付與點數後端</h4>
+            <p class="stack">Kotlin · Quarkus · GraalVM Native Image · PostgreSQL · Redis · GCP Pub/Sub</p>
+            <ul>
+              <li><strong>大型業務系統遷移</strong>：主導把停車交易核心從舊有單體系統拆出，重建為高可用、可擴展的微服務支付平台，利用 feature flag＋canary 漸進切流，完成零重大事故遷移。</li>
+              <li><strong>停車支付平台</strong>：主要 owner，全部 11 個微服務從架構設計、開發到 on-call 全程負責。</li>
+              <li><strong>冪等交易</strong>：打造訂單冪等交易機制，確保交易正確性，避免重複扣款與重複開立發票。</li>
+              <li><strong>電子發票與對帳</strong>：電子發票上傳與停車對帳、匯款流程全面自動化並內建監控告警，大幅減少工程與財務人力作業。</li>
+              <li><strong>點數整合</strong>：獨立從零打造點數平台，串接大型連鎖便利商店與電信業者，涵蓋綁定到月結對帳。</li>
+              <li><strong>訂閱服務管理</strong>：統一 App 內（RevenueCat）與網頁（Recur）雙通路訂閱狀態，支援升級與下期換方案，避免新舊訂閱重複生效；每月點數回饋分批發放且防重複。</li>
+              <li><strong>OAuth 會員整合</strong>：主導設計駕駛中心以 OAuth 2.0 接入車麻吉帳號登入，打通兩套系統的會員。</li>
+            </ul>
+
+            <h4>雲端平台與 DevOps</h4>
+            <p class="stack">GCP · GKE · Terraform · Kustomize · Argo CD · GitHub Actions · OpenTelemetry</p>
+            <ul>
+              <li><strong>GitOps</strong>：Argo CD＋Kustomize＋Terraform 管理 17 個服務與 GCP 資源，變更全經 Git 審核、可追溯、可回滾。</li>
+              <li><strong>CI/CD 標準化</strong>：打造共用 workflow（含 DB schema 審核），成為全服務的 CI/CD 標準；以 Workload Identity Federation 取代服務帳號金鑰。</li>
+              <li><strong>可觀測性</strong>：以 OpenTelemetry 串起 trace、log 與 metrics，traceId 一路貫穿負載平衡器到應用程式，API 延遲分位數進 Grafana，事故可快速定位。</li>
+            </ul>
+          </article>
+
+          <article class="job">
+            <div class="job-head">
+              <h3>Atome</h3>
+              <span class="when">2022-09 — 2023-04</span>
+            </div>
+            <p class="role">Senior Backend Engineer · 台北 · 東南亞先買後付 BNPL 平台</p>
+            <p class="stack">Spring Boot · MySQL · Redis · RabbitMQ · Kubernetes</p>
+            <ul>
+              <li><strong>支付交易</strong>：負責支付交易訂單主流程。</li>
+              <li><strong>雙 11 大促</strong>：操刀 2022 雙 11 訂單主流程的效能調校、壓測與限流，大促零重大事故。</li>
+            </ul>
+          </article>
+
+          <article class="job">
+            <div class="job-head">
+              <h3>國泰世華銀行</h3>
+              <span class="when">2020-04 — 2022-08</span>
+            </div>
+            <p class="role">Backend / DevOps Engineer · 台北</p>
+            <p class="stack">Spring Boot · Quarkus · Oracle · PostgreSQL · Redis · Kafka · OpenShift · Argo CD</p>
+            <ul>
+              <li><strong>多 cluster 管理</strong>：小組維運約 8 個 OpenShift cluster（SIT／UAT／PROD）、1,000+ Pod。</li>
+              <li><strong>CI/CD</strong>：小組維護 Azure DevOps＋Argo CD 的 CI/CD；CI 內建開源元件與 image 弱點掃描。</li>
+              <li><strong>可觀測性</strong>：小組建置並維運 Grafana、Graylog、Jaeger，支撐事故排查與效能分析。</li>
+              <li><strong>信用卡系統</strong>：開發與維運信用卡系統的 REST API 與 Batch；開發 micro-frontend SPA（Angular、single-spa）。</li>
+            </ul>
+          </article>
+
+          <article class="job">
+            <div class="job-head">
+              <h3>關貿網路</h3>
+              <span class="when">2014-05 — 2019-12</span>
+            </div>
+            <p class="role">Full Stack Engineer · 台北</p>
+            <p class="stack">Java · Spring · Struts2 · Hibernate · Oracle · jQuery</p>
+            <ul>
+              <li><strong>Receipt System</strong>：資料庫 hot data 超過 1 億筆；開發 Kiosk 應用前後端；i18n。</li>
+              <li><strong>捐贈系統</strong>：RWD 改版並搭配 APP WebView、Firebase 推播、Google Maps API、Git + Jenkins CI/CD。</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section>
+        <h2>社群與證照</h2>
+        <ul>
+          <li><strong>2024 iThome 鐵人賽 Kubernetes 組冠軍</strong>：<a href="https://ithelp.ithome.com.tw/users/20147637/ironman/7525">從 Software Developer 的角度一起認識 Kubernetes（二）</a></li>
+          <li>2023 iThome 鐵人賽 DevOps 組佳作：<a href="https://ithelp.ithome.com.tw/users/20147637/ironman/6738">從 Software Developer 的角度一起認識 Kubernetes</a></li>
+          <li>Modern Web 2021 講者：Micro Frontend</li>
+          <li>Certified Kubernetes Administrator（CKA），2021</li>
+          <li>Oracle Certified Expert, Java EE 6 Web Component Developer，2016</li>
+          <li>Oracle Certified Professional, Java SE 6 Programmer，2014</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>學歷與語言</h2>
+        <ul>
+          <li>南台科技大學，2012 畢業</li>
+          <li>中文（母語）、英文（基本工作能力）</li>
+        </ul>
+      </section>
+    </main>
+  </body>
+</html>
